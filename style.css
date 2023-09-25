@@ -409,6 +409,7 @@ body{
         order: -1;
     }
     #second{
+        padding-top: 40px;
         order: 0;
     }
     .skills__title{
