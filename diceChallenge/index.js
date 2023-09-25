@@ -55,26 +55,25 @@ document.querySelector(".btn").addEventListener("click",function(){
     const Player1 = document.querySelector(".input1").value;
     const Player2 = document.querySelector(".input2").value;
     
-    if (Player1.lengh === 0){
-        Player1.textContent = "Player1"
-    }
-    if (Player2.lengh === 0){
-        Player2.textContent = "Player1"
-    }
-
-
-
-    if (n1 > n2){
-        document.querySelector(".result").innerHTML = Player1 + " Win!"
-    }
-    if (n1 < n2){
-        document.querySelector(".result").innerHTML = Player2 + " Win!"
-    }
-    if (n1 === n2){
-        document.querySelector(".result").innerHTML = "Holy shit its a tie!!!"
+    if (Player1.length === 0) {
+        document.getElementById("p1").textContent = "Player1";
     }
     
-})
+    if (Player2.length === 0) {
+        document.getElementById("p2").textContent = "Player2";
+    }
+
+    if (n1 > n2) {
+        document.querySelector(".result").innerHTML = Player1 + " Win!";
+    }
+    if (n1 < n2) {
+        document.querySelector(".result").innerHTML = Player2 + " Win!";
+    }
+    if (n1 === n2) {
+        document.querySelector(".result").innerHTML = "Holy shit its a tie!!!";
+    }
+    
+});
 //  Player name change:
 const Player1NameInput = document.querySelector(".input1");
 const Player2NameInput = document.querySelector(".input2");
