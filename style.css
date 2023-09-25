@@ -179,6 +179,9 @@ body{
 }
 /* ******About Me******** */
 .about__container{
+    background: url(./images/secondaryBackground.png);
+    background-repeat: no-repeat;
+    background-size: cover;
     display: grid;
     grid-template: 2fr 2fr 50px/ 400px auto;
     gap: 20px;
