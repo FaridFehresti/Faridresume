@@ -18,6 +18,7 @@ body{
   height: 100%;
   background-size: cover;
   background-repeat: no-repeat;
+  font-family: 'Roboto Condensed';
 }
 /* ****Header section**** */
 .header__container{
@@ -249,19 +250,39 @@ body{
   .container{
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: auto;
+    padding-top: 20px;
+    padding-bottom: 30px;
+    
   }
   .dice1 > img{
-    order: 1;
     width: 100px;
     height: 100px;
   }
-  #p1{
-    order:2;
+  .player1{
+    
+    order: -4;
+  }
+  .player2{
+    
+    order: -2;
+  }
+  .dice1{
+    order: -3;
+  }
+  .dice2{
+    order: -1;
   }
   .dice2 > img{
-    order: 3;
+
     width: 100px;
     height: 100px;
+  }
+  .roller{
+    order: 1;
   }
 
 }
