@@ -1,48 +1,92 @@
-function dice(){
-    var roll = Math.round(Math.random()*6);
-    return roll;
-}
-n1 = dice();
-n2 = dice();
 
-if (n1===1){
-    document.querySelector(".img1").setAttribute("src", "./images/dice1.png");
-}
-if (n1===2){
-    document.querySelector(".img1").setAttribute("src", "./images/dice2.png");
-}
-if (n1===3){
-    document.querySelector(".img1").setAttribute("src", "./images/dice3.png");
-}
-if (n1===4){
-    document.querySelector(".img1").setAttribute("src", "./images/dice4.png");
-}
-if (n1===5){
-    document.querySelector(".img1").setAttribute("src", "./images/dice5.png");
-}
-// ################ player 2:
-if (n2===1){
-    document.querySelector(".img2").setAttribute("src", "./images/dice1.png");
-}
-if (n2===2){
-    document.querySelector(".img2").setAttribute("src", "./images/dice2.png");
-}
-if (n2===3){
-    document.querySelector(".img2").setAttribute("src", "./images/dice3.png");
-}
-if (n2===4){
-    document.querySelector(".img2").setAttribute("src", "./images/dice4.png");
-}
-if (n2===5){
-    document.querySelector(".img2").setAttribute("src", "./images/dice5.png");
-}
 
-if (n1 > n2){
-    document.querySelector("h1").innerText = " Player 1 wins!";
-}
-if(n1 < n2){
-    document.querySelector("h1").innerText = " Player 2 wins!";
-}
-if(n1 === n2){
-    document.querySelector("h1").innerText = "WOW, Tie!!";
-}
+document.querySelector(".btn").addEventListener("click",function(){
+    function dice(){
+        var roll = Math.floor(Math.random()*6) + 1;
+        return roll;
+    }
+    n1 = dice();
+    n2 = dice();
+    var dice1 = document.querySelector("#dice1");
+    var dice2 = document.querySelector("#dice2");
+    
+    switch (n1) {
+        case 1:
+            dice1.setAttribute("src","./images/dice1.png");
+            break;
+        case 2:
+            dice1.setAttribute("src","./images/dice2.png");
+            break;
+        case 3:
+            dice1.setAttribute("src","./images/dice3.png");
+            break;
+        case 4:
+            dice1.setAttribute("src","./images/dice4.png");
+            break;
+        case 5:
+            dice1.setAttribute("src","./images/dice5.png");
+            break;
+        case 6:
+            dice1.setAttribute("src","./images/dice6.png");
+            break;
+    }
+    
+    switch (n2) {
+        case 1:
+            dice2.setAttribute("src","./images/dice1.png");
+            break;
+        case 2:
+            dice2.setAttribute("src","./images/dice2.png");
+            break;
+        case 3:
+            dice2.setAttribute("src","./images/dice3.png");
+            break;
+        case 4:
+            dice2.setAttribute("src","./images/dice4.png");
+            break;
+        case 5:
+            dice2.setAttribute("src","./images/dice5.png");
+            break;
+        case 6:
+            dice2.setAttribute("src","./images/dice6.png");
+            break;
+    }
+
+    const Player1 = document.querySelector(".input1").value;
+    const Player2 = document.querySelector(".input2").value;
+    
+    if (Player1.lengh === 0){
+        Player1.textContent = "Player1"
+    }
+    if (Player2.lengh === 0){
+        Player2.textContent = "Player1"
+    }
+
+
+
+    if (n1 > n2){
+        document.querySelector(".result").innerHTML = Player1 + " Win!"
+    }
+    if (n1 < n2){
+        document.querySelector(".result").innerHTML = Player2 + " Win!"
+    }
+    if (n1 === n2){
+        document.querySelector(".result").innerHTML = "Holy shit its a tie!!!"
+    }
+    
+})
+//  Player name change:
+const Player1NameInput = document.querySelector(".input1");
+const Player2NameInput = document.querySelector(".input2");
+const Player1 = document.getElementById("p1");
+const Player2 = document.getElementById("p2");
+
+
+Player1NameInput.addEventListener("input", function(){
+    Player1.textContent = Player1NameInput.value;
+});
+Player2NameInput.addEventListener("input", function(){
+    Player2.textContent = Player2NameInput.value;
+});
+
+

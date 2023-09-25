@@ -8,21 +8,45 @@
 
   </head>
   <body>
-
-    <div class="container">
-      <h1>Refresh Me</h1>
-
-      <div class="dice">
-        <p>Player 1</p>
-        <img class="img1" src="./images/dice6.png">
+    <!-- navbar -->
+    <section id="header">
+      <div class="header__container">
+            <div class="logo">Farid</div>
+            <div class="navbar__toggle" id="mobile-menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+            <ul class="navbar">
+              <li class="navbar__link"><a href="">Home</a></li>
+              <li class="navbar__link"><a href="./Content/content.html">Projects</a></li>
+              <li class="navbar__link"><a href="#about">About me</a></li>
+              <li class="navbar__link"><a href="">Contact</a></li>
+              <li class="navbar__link"><button class="btn"><a href="">Login</a></button></li>
+            </ul>
       </div>
+    </section>
 
-      <div class="dice">
-        <p>Player 2</p>
-        <img class="img2" src="./images/dice6.png">
+    <!-- Game -->
+    <section>
+      <div class="container">
+        <div class="player1">
+          <p class="player" id="p1">Player 1</p>
+          <input type="text" placeholder="Player one name" class="input1">
+        </div>
+        <div class="player2">
+          <p class="player" id="p2">Player 2</p>
+          <input type="text" placeholder="Player one name" class="input2">
+        </div>
+        <div class="roller">
+          <button class="btn">Roll</button>
+          <img src="./images/diceRoller.png" alt="" class="roller__image">
+        </div>
+        <h1 class="result">You win</h1>
+        <div class="dice1"><img src="./images/dice1.png" alt="" id="dice1"></div>
+        <div class="dice2"><img src="./images/dice1.png" alt="" id="dice2"></div>
       </div>
-
-    </div>
+    </section>
 
     <script src="./index.js"></script>
   </body>
