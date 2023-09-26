@@ -177,6 +177,7 @@ body{
     height: 90%;
     justify-content: center;
     align-items: center;
+    padding-left: 20px;
 }
 .contentText{
     color: white;
