@@ -1,13 +1,15 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Expense Tracker</title>
   <link rel="stylesheet" type="text/css" href="styles.css">
   <link rel="stylesheet" href="./style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600;700;800;900&family=Roboto+Condensed:wght@300;400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600;700;800;900&family=Roboto+Condensed:wght@300;400;700&display=swap" rel="stylesheet">  
 </head>
 <body>
     <!-- header -->
@@ -35,13 +37,13 @@
 
       <div class="currentBalance__container">
         <label for="currentBalance" class="label">Set Current Balance:</label>
-        <input type="text" id="currentBalance" v-model="currentBalance" v-bind:class="{ 'invalid': !isNumeric(currentBalance) }" />
+        <input placeholder="Enter your balance!" type="text" id="currentBalance" v-model="currentBalance" v-bind:class="{ 'invalid': !isNumeric(currentBalance) }" />
         <select v-model="currency" class="currency">
           <option value="USD">$ (Dollar)</option>
           <option value="GBP">£ (Pound)</option>
           <option value="IRR">IRR (Iranian Toman)</option>
         </select>
-        <button v-on:click="setBalance" :disabled="!isNumeric(currentBalance)" class="submit_btn">Set Balance</button>
+        <button v-on:click="setBalance" :disabled="!isNumeric(currentBalance)" class="submit_btn btn" >Set Balance</button>
         <div class="displayBalance">
           <h2>Current Balance: {{ displayBalance }}</h2>
         </div>

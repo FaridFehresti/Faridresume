@@ -1,15 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@700&family=Poppins:wght@300;400;500;600;700&family=Press+Start+2P&display=swap');
 
 
-*{
-    font-family: 'Poppins', sans-serif;
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    outline: none; border: none;
-    text-decoration: none;
-    text-transform: uppercase;
-}
+
 :root{
     --greenLight: #66D4B0;
     --greenMedium: #00A78E;
