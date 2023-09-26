@@ -4,28 +4,45 @@
 <head>
   <meta charset="utf-8">
   <title>Drum Kit</title>
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="./style.css">
   <link href="https://fonts.googleapis.com/css?family=Arvo" rel="stylesheet">
 </head>
 
 <body>
+    <!-- navbar -->
+    <section id="header">
+        <div class="header__container">
+              <div class="logo">Farid</div>
+              <div class="navbar__toggle" id="mobile-menu">
+                  <span class="bar"></span>
+                  <span class="bar"></span>
+                  <span class="bar"></span>
+              </div>
+              <ul class="navbar">
+                <li class="navbar__link"><a href="../index.html">Home</a></li>
+                <li class="navbar__link"><a href="../Content/content.html">Projects</a></li>
+                <li class="navbar__link"><a href="#about">About me</a></li>
+                <li class="navbar__link"><a href="../Contact/contact.html">Contact</a></li>
+                <li class="navbar__link"><button class="btn"><a href="">Login</a></button></li>
+              </ul>
+        </div>
+    </section>
 
-  <h1 id="title">Drum 🥁 Kit</h1>
-  <div class="set">
-    <button class="w drum">w</button>
-    <button class="a drum">a</button>
-    <button class="s drum">s</button>
-    <button class="d drum">d</button>
-    <button class="j drum">j</button>
-    <button class="k drum">k</button>
-    <button class="l drum">l</button>
-  </div>
+    <div class="container">
+        <h1 id="title">Drum 🥁 Kit</h1>
+        <h1 id="title" style="font-size: 50px;" >Press the keys</h1>
+        <div class="set">
+            <button class="w drum">w</button>
+            <button class="a drum">a</button>
+            <button class="s drum">s</button>
+            <button class="d drum">d</button>
+            <button class="j drum">j</button>
+            <button class="k drum">k</button>
+            <button class="l drum">l</button>
+        </div>
+    </div>
 
-
-  <footer>
-    Made with ❤️ in London.
-  </footer>
-  <script src="./index.js"></script>
+    <script src="./app.js"></script>
 </body>
 
 </html>
