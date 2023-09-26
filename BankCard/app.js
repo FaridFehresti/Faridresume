@@ -8,10 +8,10 @@ document.querySelector('.card__number__input').oninput = () => {
     const cardNumberBox = document.querySelector('.card__number__box');
     const cardNumber = cardNumberInput.value;
 
-    // Remove all non-digit characters from the card number
+    
     const cleanedCardNumber = cardNumber.replace(/\D/g, '');
 
-    // Insert spaces every 4th digit
+    
     const formattedCardNumber = cleanedCardNumber.replace(/(.{4})/g, '$1 ');
 
     cardNumberBox.innerText = formattedCardNumber;
@@ -46,7 +46,7 @@ document.querySelector('.cvv__input').oninput = () => {
 };
 
 document.querySelector('.submit__btn').onclick = (event) => {
-    event.preventDefault(); // Prevent the form from submitting and refreshing the page
+    event.preventDefault(); 
 
     const cardNumber = document.querySelector('.card__number__input').value;
     const cardHolder = document.querySelector('.card__holder__input').value;
@@ -54,15 +54,21 @@ document.querySelector('.submit__btn').onclick = (event) => {
     const expirationYear = document.querySelector('.year__input').value;
     const cvv = document.querySelector('.cvv__input').value;
 
-    // Save the card information to localStorage
+    
     localStorage.setItem('cardNumber', cardNumber);
     localStorage.setItem('cardHolder', cardHolder);
     localStorage.setItem('expirationMonth', expirationMonth);
     localStorage.setItem('expirationYear', expirationYear);
     localStorage.setItem('cvv', cvv);
 
-    // Optionally, you can display a success message or perform any other actions here
-
-    // Reset the form fields
+    
     document.querySelector('form').reset();
 };
+//mobile
+const menu = document.querySelector('#mobile-menu');
+const menuLinks = document.querySelector('.navbar');
+
+menu.addEventListener('click', function(){
+    menu.classList.toggle('is-active');
+    menuLinks.classList.toggle('active');
+});

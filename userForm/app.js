@@ -35,7 +35,7 @@ document.addEventListener("DOMContentLoaded", () => {
     loginForm.addEventListener("submit", (e) => {
       e.preventDefault();
   
-      // Perform your AJAX/Fetch login
+
   
       setFormMessage(loginForm, "error", "Invalid username/password combination!");
     });
@@ -51,4 +51,12 @@ document.addEventListener("DOMContentLoaded", () => {
       });
     });
   });
+  // mobile
+const menu = document.querySelector('#mobile-menu');
+const menuLinks = document.querySelector('.navbar');
+
+menu.addEventListener('click', function(){
+    menu.classList.toggle('is-active');
+    menuLinks.classList.toggle('active');
+});
   
